@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuário</title>
+</head>
+<body>
+    <h3>Olá, {{nome}}. Seja bem-vindo(a)!</h3>
+    <P>Nome: {{nome}}</P>
+    <p>Profissão: {{dados}}</p><!--Traz toda a estrutura como exemplo-->
+    <p>Profissão: {{dados.profissao}}</p>
+    <p>Curso: {{dados.curso}}</p>
+
+    <h2>{{nome}}</h2>
+    <p>
+        <b>Profissão:</b>{{dados.profissao}}<br/>
+        <b>Curso:</b>{{dados.curso}}
+    </p>
+</body>
+</html>

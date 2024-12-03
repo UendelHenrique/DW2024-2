@@ -31,8 +31,8 @@ def login():
 
 @app_Uendel.route("/autenticar", methods=['GET', 'POST'])
 def autenticar():
-    usuario = request.args.get('nome_usuario')
-    senha = request.args.get('senha')
+    usuario = request.form.get('nome_usuario')
+    senha = request.form.get('senha')
     return f"usuario: {usuario} e senha: {senha}"
 
 if __name__ == "__main__":

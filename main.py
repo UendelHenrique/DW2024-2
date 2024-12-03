@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, flash, redirect
 
-app_Uendel = Flask (__name__)
+app_Uendel = Flask (__name__, template_folder='templates_aulas')
 app_Uendel.config['SECRET_KEY'] = "secreta-IFRO"
 @app_Uendel.route("/")
 def raiz():

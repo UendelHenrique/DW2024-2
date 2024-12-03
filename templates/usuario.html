@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuário</title>
-</head>
-<body>
-    <h2>Olá, {{nome}}</h2>
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <h2>Olá, {{nome}}.</h2>
     <p>
         <b>Profissão:</b> {{dados.Profissão}}<br>
         <b>Curso:</b> {{dados.Curso}}
     </p>
-</body>
-</html>
+{% endblock %}

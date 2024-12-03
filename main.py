@@ -1,7 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash, redirect
 
 app_Uendel = Flask (__name__)
-
+app_Uendel.config['SECRET_KEY'] = "secreta-IFRO"
 @app_Uendel.route("/")
 def raiz():
     return render_template("homepage.html")
@@ -33,7 +33,12 @@ def login():
 def autenticar():
     usuario = request.form.get('nome_usuario')
     senha = request.form.get('senha')
-    return f"usuario: {usuario} e senha: {senha}"
-
+    if usuario == "admin" and senha == "ifro":
+        return f"usuario: {usuario} e senha: {senha}"
+    else:
+        flash("Dados inválidos!")
+        flash("Login ou senha inválidos!")
+        return redirect ('/login')
+    
 if __name__ == "__main__":
     app_Uendel.run(port = 8080)
